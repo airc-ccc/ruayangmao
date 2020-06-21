@@ -18,7 +18,7 @@ nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%i:%s")
 getLogin = requests.post('http://sm.ewmtool.com/getLogin', data={'userCode': userCode, 'userPass': userPass})
 if getLogin.json()['code'] != 200:
     print(getLogin.json())
-    break
+    exit
 print(getLogin.json())
 
 # put wechat group number
