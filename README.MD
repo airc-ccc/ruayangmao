@@ -1,4 +1,9 @@
 ### ruayangmao
+
+##### git clone git@github.com:airc-ccc/ruayangmao.git
+
+##### cd ruayangmao
+
 ##### Create config file `config.conf` and input:
 ```
 [basic]
@@ -8,9 +13,11 @@ password=<input your password>
 
 ##### Run project:
 ```
-Make sure you have `python3` environmental!
+1. Make sure you have `python3` environmental!
 
-Open termainl, input `python3 main.py` in project root directory.
+2. Execute `pip3 install -r requirements.txt`
+
+3. Open termainl, input `python3 main.py` in project root directory.
 ```
 
 #### Install Python3: [`Click Me`](https://www.python.org/downloads/)
