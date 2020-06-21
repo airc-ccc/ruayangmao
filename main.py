@@ -3,16 +3,11 @@
 import os
 import requests
 import qrcode
-import datetime
-import configparser
+import datetime# load confg
 
-# load confg
-conf= configparser.ConfigParser()
-conf.read('./config.conf')
-
-userCode = conf.get('basic', 'username')
-userPass = conf.get('basic', 'password')
-wechatGroupNumber = input('Input WeChat Group Count: ')
+userCode = input('富富转账户: ')
+userPass = input('富富转密码: ')
+wechatGroupNumber = input('微信群总数: ')
 setSuccess = 'http://sm.ewmtool.com/insertRecord?codeSuccess=0&recordId='
 setError = 'http://sm.ewmtool.com/insertRecord?codeSuccess=1&recordId='
 # now date time

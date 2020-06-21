@@ -4,13 +4,6 @@
 
 #### Execute `cd ruayangmao/`
 
-##### Create config file `config.conf` and input:
-```
-[basic]
-username=<input your username>
-password=<input your password>
-```
-
 ##### Run project:
 ```
 1. Make sure you have `python3` environmental!
