@@ -1,8 +1,8 @@
-### ruayangmao
+## ruayangmao
 
-##### git clone git@github.com:airc-ccc/ruayangmao.git
+#### git clone git@github.com:airc-ccc/ruayangmao.git
 
-##### cd ruayangmao
+#### cd ruayangmao
 
 ##### Create config file `config.conf` and input:
 ```
