@@ -13,7 +13,7 @@ Make sure you have `python3` environmental!
 Open termainl, input `python3 main.py` in project root directory.
 ```
 
-#### Install Python3: <a href="https://www.python.org/downloads/" target="_blank">`Click Me`</a>
+#### Install Python3: [`Click Me`](https://www.python.org/downloads/)
 
 
 #### PS1: The `data` folder is save data log, Dont't move and remove.
