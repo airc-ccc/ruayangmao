@@ -1,7 +1,6 @@
 ### ruayangmao
-#### 初始化
-##### touch file config.conf in **./**
-##### input this:
+#### Init project
+##### touch file `config.conf` and input:
 ```
 [basic]
 username=<input your username>
