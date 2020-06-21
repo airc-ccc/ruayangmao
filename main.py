@@ -19,7 +19,6 @@ setError = 'http://sm.ewmtool.com/insertRecord?codeSuccess=1&recordId='
 nowDate = datetime.datetime.now().strftime("%Y-%m-%d")
 nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%i:%s")
 
-
 # Login POST
 getLogin = requests.post('http://sm.ewmtool.com/getLogin', data={'userCode': userCode, 'userPass': userPass})
 
@@ -34,6 +33,10 @@ savePath = './qrcode/' + nowDate + '/'
 
 if not os.path.exists(savePath):
     os.makedirs(savePath)
+
+saveDataPath = './data/'
+if not os.path.exists(saveDataPath):
+    os.makedirs(saveDataPath)
 
 dataFile = open('./data/data-'+nowDate+'.json', 'a')
 gone = True
