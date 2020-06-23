@@ -1,13 +1,28 @@
 #!/usr/bin/python3
 
 import os
+import sys
 import requests
 import qrcode
-import datetime# load confg
+import datetime
+import argparse
 
-userCode = input('富富转账户: ')
-userPass = input('富富转密码: ')
-wechatGroupNumber = input('微信群总数: ')
+parser = argparse.ArgumentParser(description='Process some params.')
+
+parser.add_argument('-u', type=str, required=True,
+                    help='fufuzhuan username')
+
+parser.add_argument('-p', type=str, required=True,
+                    help='fufuzhuan password')
+
+parser.add_argument('-gn', type=int, required=True,
+                    help='you have wechat group numbner.')
+
+args = parser.parse_args()
+
+userCode = args.u
+userPass = args.p
+wechatGroupNumber = args.gn
 setSuccess = 'http://sm.ewmtool.com/insertRecord?codeSuccess=0&recordId='
 setError = 'http://sm.ewmtool.com/insertRecord?codeSuccess=1&recordId='
 # now date time
@@ -18,12 +33,14 @@ nowTime = datetime.datetime.now().strftime("%Y-%m-%d %H:%i:%s")
 getLogin = requests.post('http://sm.ewmtool.com/getLogin', data={'userCode': userCode, 'userPass': userPass})
 if getLogin.json()['code'] != 200:
     print(getLogin.json())
-    exit
+    sys.exit()
 print(getLogin.json())
 
 # put wechat group number
 userDayCount = requests.post('http://sm.ewmtool.com/userDayCount', data={'number': wechatGroupNumber}, cookies=getLogin.cookies)
-
+if userDayCount.json()['code'] != 200:
+    print(userDayCount.json())
+    sys.exit()
 print(userDayCount.json())
 
 savePath = './qrcode/' + nowDate + '/'
